@@ -78,21 +78,24 @@
       </div>
     </div>
 
-    <!-- Step 6: Result -->
-    <div class="tab" id="step6">
-      <h2>Result</h2>
-      <p id="resultText">
-        <strong>Set Anode:</strong> <span id="resultAnode"></span><br/>
-        <strong>Set Date & Shift:</strong> <span id="setInfo"></span><br/>
-        <strong>Reference Anode:</strong> <span id="refAnodeLabel"></span><br/>
-        <strong>Reference Date & Shift:</strong> <span id="refInfo"></span><br/>
-        <strong>Calculated Gauge:</strong> <span id="calcResult">[calculation result here]</span>
-      </p>
-      <div class="buttons">
-        <button onclick="prevTab(5)">Previous</button>
-        <button onclick="restart()">Start Over</button>
-      </div>
-    </div>
+   <!-- Step 6: Result -->
+<div class="tab" id="step6">
+  <h2>Result</h2>
+  <p id="resultText">
+    <strong>Set Anode:</strong> <span id="resultAnode"></span><br/>
+    <strong>Set Date & Shift:</strong> <span id="setInfo"></span><br/>
+    <strong>Reference Anode:</strong> <span id="refAnodeLabel"></span><br/>
+    <strong>Reference Date & Shift:</strong> <span id="refInfo"></span><br/>
+    <strong>Mark:</strong> <span id="markResult">[shift+contour]</span><br/>
+    <strong style="font-size:1.6rem; color:#3498db;">Final Gauge:</strong> 
+    <span id="calcResult" style="font-size:1.6rem; color:#3498db;">[final answer]</span>
+  </p>
+  <div class="buttons">
+    <button onclick="prevTab(5)">Previous</button>
+    <button onclick="restart()">Start Over</button>
+  </div>
+</div>
+
 
   </div>
 
