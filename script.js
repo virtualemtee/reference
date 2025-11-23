@@ -13,6 +13,12 @@ function nextTab(step) {
     const refDate = document.getElementById('refDateInput').value;
     const refShift = document.querySelector("input[name='refShift']:checked")?.value;
 
+    if (setAnode < 1 || setAnode > 18 || refAnode < 1 || refAnode > 18 || isNaN(setAnode) || isNaN(refAnode)) {
+    alert("Error: Set Anode and Reference Anode must be numbers between 1 and 18.");
+    return;
+}
+
+    
     // Contour groups
     const contours = [
       [1,2,3,4],
