@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anode Reference Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Step 1: Set Anode -->
+    <div class="tab active" id="step1">
+      <h2>Which anode are you setting?</h2>
+      <input type="number" id="setAnodeInput" placeholder="Enter anode number" />
+      <div class="buttons">
+        <button onclick="nextTab(2)">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Set Date + Shift -->
+    <div class="tab" id="step2">
+      <h2>Select date for "Set Anode"</h2>
+      <div class="options">
+        <input type="radio" name="setShift" value="Day" id="setDay" />
+        <label for="setDay">Day</label>
+
+        <input type="radio" name="setShift" value="Swing" id="setSwing" />
+        <label for="setSwing">Swing</label>
+
+        <input type="radio" name="setShift" value="Grave" id="setGrave" />
+        <label for="setGrave">Grave</label>
+      </div>
+      <input type="date" id="setDateInput" />
+      <div class="buttons">
+        <button onclick="prevTab(1)">Previous</button>
+        <button onclick="nextTab(3)">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Reference Anode -->
+    <div class="tab" id="step3">
+      <h2>Enter reference anode</h2>
+      <input type="number" id="refAnodeInput" placeholder="Enter reference anode number" />
+      <div class="buttons">
+        <button onclick="prevTab(2)">Previous</button>
+        <button onclick="nextTab(4)">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Reference Date + Shift -->
+    <div class="tab" id="step4">
+      <h2>Select date for "Reference Anode"</h2>
+      <div class="options">
+        <input type="radio" name="refShift" value="Day" id="refDay" />
+        <label for="refDay">Day</label>
+
+        <input type="radio" name="refShift" value="Swing" id="refSwing" />
+        <label for="refSwing">Swing</label>
+
+        <input type="radio" name="refShift" value="Grave" id="refGrave" />
+        <label for="refGrave">Grave</label>
+      </div>
+      <input type="date" id="refDateInput" />
+      <div class="buttons">
+        <button onclick="prevTab(3)">Previous</button>
+        <button onclick="nextTab(5)">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 5: Reference Gauge -->
+    <div class="tab" id="step5">
+      <h2>Gauge the reference anode</h2>
+      <input type="number" id="refGaugeInput" placeholder="Enter reference gauge value" />
+      <div class="buttons">
+        <button onclick="prevTab(4)">Previous</button>
+        <button onclick="nextTab(6)">Done</button>
+      </div>
+    </div>
+
+    <!-- Step 6: Result -->
+    <div class="tab" id="step6">
+      <h2>Result</h2>
+      <p id="resultText">
+        <strong>Set Anode:</strong> <span id="resultAnode"></span><br/>
+        <strong>Set Date & Shift:</strong> <span id="setInfo"></span><br/>
+        <strong>Reference Anode:</strong> <span id="refAnodeLabel"></span><br/>
+        <strong>Reference Date & Shift:</strong> <span id="refInfo"></span><br/>
+        <strong>Calculated Gauge:</strong> <span id="calcResult">[calculation result here]</span>
+      </p>
+      <div class="buttons">
+        <button onclick="prevTab(5)">Previous</button>
+        <button onclick="restart()">Start Over</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
